@@ -1,5 +1,5 @@
 {
-    "name": "dz-id/laravel-html-minifier",
+    "name": "zamcoder/laravel9-html-minifier",
     "description": "Html Minifier adalah paket simpel untuk minify output Html, Css style, dan Javascript sebelum dirender ke browser untuk aplikasi Laravel anda.",
     "keywords": [
         "laravel",
@@ -10,8 +10,8 @@
     ],
     "authors": [
         {
-            "name": "DulLah",
-            "email": "dulah755@gmail.com"
+            "name": "zamcoder",
+            "email": "edwinzamzami01@gmail.com"
         }
     ],
     "require": {
@@ -23,14 +23,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "DzId\\LaravelHtmlMinifier\\": "src/"
+            "zamcoder\\LaravelHtmlMinifier\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "DzId\\LaravelHtmlMinifier\\HtmlMinifierServiceProvider"
+                "zamcoder\\LaravelHtmlMinifier\\HtmlMinifierServiceProvider"
             ]
         }
     }
