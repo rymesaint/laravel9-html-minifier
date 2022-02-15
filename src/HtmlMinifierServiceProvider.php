@@ -19,7 +19,7 @@ class HtmlMinifierServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__."/../config/laravel-html-minifier.php" => config_path("laravel-html-minifier.php"),
+            __DIR__."/../config/laravel9-html-minifier.php" => config_path("laravel9-html-minifier.php"),
         ]);
     }
 
@@ -28,6 +28,6 @@ class HtmlMinifierServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__."/../config/laravel-html-minifier.php", "laravel-html-minifier.php");
+        $this->mergeConfigFrom(__DIR__."/../config/laravel9-html-minifier.php", "laravel9-html-minifier.php");
     }
 }
