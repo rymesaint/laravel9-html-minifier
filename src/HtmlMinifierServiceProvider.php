@@ -1,6 +1,6 @@
 <?php
 
-namespace DzId\LaravelHtmlMinifier;
+namespace zamcoder\Laravel9HtmlMinifier;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
