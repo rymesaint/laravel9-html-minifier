@@ -5,9 +5,10 @@
 <a href="https://packagist.org/packages/dz-id/laravel-html-minifier"><img src="https://poser.pugx.org/renatomarinho/laravel-page-speed/license" alt="License"></a>
 </p>
 
-# Laravel Html Minifier
+# Laravel 9 Html Minifier
+Paket ini sebelumnya adalah milik https://github.com/dz-id/laravel-html-minifier , karena beliau belum update Laravel 9 , jadi saya coba mengupdatenya, mohon maaf jika ada yg salah.
 
-Adalah Paket simpel untuk minify HTML, Css Style, dan Javascript sebelum dirender ke browser untuk aplikasi Laravel anda.
+Adalah Paket simpel untuk minify HTML, Css Style, dan Javascript sebelum dirender ke browser untuk aplikasi Laravel 9 anda.
 
 Alat ini hanya bekerja jika output yang diberikan adalah bentuk struktur html yang valid meliputi tag html, head dan body. contohnya
 
@@ -55,23 +56,25 @@ atau
 
 > **Membutuhkan:**
 - **[PHP 7.2.5+](https://php.net/releases/)**
+- **[PHP 8.0+](https://php.net/releases/)**
 - **[Laravel 6.0+](https://github.com/laravel/laravel)**
+- **[Laravel 9.0+](https://github.com/laravel/laravel)**
 
 ## Tahap pertama anda bisa menginstall paket ini dengan [Composer 2x](https://getcomposer.org/download/)
 
 ```sh
-composer require dz-id/laravel-html-minifier
+composer require zamcoder/laravel9-html-minifier
 ```
 
 ## Publish konfigurasi file
 
 ```sh
-php artisan vendor:publish --provider="DzId\LaravelHtmlMinifier\HtmlMinifierServiceProvider"
+php artisan vendor:publish --provider="zamcoder\Laravel9HtmlMinifier\HtmlMinifierServiceProvider"
 ```
 
 ## Jangan lupa untuk mendaftarkan ke Global Middleware
 
-[\DzId\LaravelHtmlMinifier\Middleware\MinifyHtml::class](src/Middleware/MinifyHtml.php) dan Middleware lainnya harus didaftarkan ke kernel jika diperlukan, contoh :
+[\zamcoder\Laravel9HtmlMinifier\Middleware\MinifyHtml::class](src/Middleware/MinifyHtml.php) dan Middleware lainnya harus didaftarkan ke kernel jika diperlukan, contoh :
 
 ```php
 
@@ -79,15 +82,15 @@ php artisan vendor:publish --provider="DzId\LaravelHtmlMinifier\HtmlMinifierServ
 
 protected $middleware = [
     ....
-    \DzId\LaravelHtmlMinifier\Middleware\MinifyHtml::class,         // middleware untuk minify html
-    \DzId\LaravelHtmlMinifier\Middleware\MinifyCss::class,         // middleware untuk minify css style
-    \DzId\LaravelHtmlMinifier\Middleware\MinifyJavascript::class, // middleware untuk minify kode javascript
+    \zamcoder\Laravel9HtmlMinifier\Middleware\MinifyHtml::class,         // middleware untuk minify html
+    \zamcoder\Laravel9HtmlMinifier\Middleware\MinifyCss::class,         // middleware untuk minify css style
+    \zamcoder\Laravel9HtmlMinifier\Middleware\MinifyJavascript::class, // middleware untuk minify kode javascript
 ];
 ```
 
 ## Informasi Middleware
 
-##### [\DzId\LaravelHtmlMinifier\Middleware\MinifyHtml::class](src/Middleware/MinifyHtml.php)
+##### [\zamcoder\Laravel9HtmlMinifier\Middleware\MinifyHtml::class](src/Middleware/MinifyHtml.php)
 
 ```MinifyHtml::class``` fungsinya adalah untuk minify html menghapus blank spasi dan juga baris baru menjadi satu baris.
 
@@ -97,20 +100,20 @@ protected $middleware = [
 ```html
 <html lang="id">
     <head>
-        <title>Laravel Html Minifier</title>
+        <title>Laravel 9 Html Minifier</title>
     </head>
     <body>
-       <h1>Laravel Html Minifier</h1>
+       <h1>Laravel 9 Html Minifier</h1>
     </body>
 </html>
 ```
 
 - Sesudah diminify
 ```html
-<html lang="id"><head><title>Laravel Html Minifier</title></head><body><h1>Laravel Html Minifier</h1></body></html>
+<html lang="id"><head><title>Laravel 9 Html Minifier</title></head><body><h1>Laravel 9 Html Minifier</h1></body></html>
 ```
 
-##### [\DzId\LaravelHtmlMinifier\Middleware\MinifyCss::class](src/Middleware/MinifyCss.php)
+##### [\zamcoder\Laravel9HtmlMinifier\Middleware\MinifyCss::class](src/Middleware/MinifyCss.php)
 
 ```MinifyCss::class``` fungsinya adalah untuk minify css style menghapus blank spasi dan juga baris baru menjadi satu baris.
 
@@ -130,7 +133,7 @@ body {
 body{background-color:salmon;width:100%;height:100%}
 ```
 
-##### [\DzId\LaravelHtmlMinifier\Middleware\MinifyJavascript::class](src/Middleware/MinifyJavascript.php)
+##### [\zamcoder\Laravel9HtmlMinifier\Middleware\MinifyJavascript::class](src/Middleware/MinifyJavascript.php)
 
 ```MinifyJavascript::class``` fungsinya adalah untuk minify kode javascript menghapus blank spasi dan juga baris baru menjadi satu baris.
 
