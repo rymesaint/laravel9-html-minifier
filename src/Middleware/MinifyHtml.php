@@ -1,6 +1,6 @@
 <?php
 
-namespace DzId\LaravelHtmlMinifier\Middleware;
+namespace zamcoder\Laravel9HtmlMinifier\Middleware;
 
 class MinifyHtml extends Minifier
 {
@@ -113,7 +113,7 @@ class MinifyHtml extends Minifier
             " ",
         ], $value));
         
-        $allowRemoveComments = (bool) config("laravel-html-minifier.remove_comments", true);
+        $allowRemoveComments = (bool) config("laravel9-html-minifier.remove_comments", true);
 
         return $allowRemoveComments == false
             ? $value
