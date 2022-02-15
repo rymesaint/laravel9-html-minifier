@@ -1,6 +1,6 @@
 <?php
 
-namespace DzId\LaravelHtmlMinifier\Middleware;
+namespace zamcoder\Laravel9HtmlMinifier\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -134,7 +134,7 @@ abstract class Minifier
         /* Apakah laravel-html-minifier.enable belum dipanggil? */
         if (is_null(static::$isEnable))
         {
-            static::$isEnable = (bool) config("laravel-html-minifier.enable", true);
+            static::$isEnable = (bool) config("laravel9-html-minifier.enable", true);
         }
 
         return static::$isEnable;
@@ -145,7 +145,7 @@ abstract class Minifier
         /* Apakah laravel-html-minifier.enable belum dipanggil? */
         if (is_null(static::$ignore))
         {
-            static::$ignore = (array) config("laravel-html-minifier.ignore", []);
+            static::$ignore = (array) config("laravel9-html-minifier.ignore", []);
         }
 
         return static::$ignore;
