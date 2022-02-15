@@ -23,14 +23,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "zamcoder\\LaravelHtmlMinifier\\": "src/"
+            "zamcoder\\Laravel9HtmlMinifier\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "zamcoder\\LaravelHtmlMinifier\\HtmlMinifierServiceProvider"
+                "zamcoder\\Laravel9HtmlMinifier\\HtmlMinifierServiceProvider"
             ]
         }
     }
